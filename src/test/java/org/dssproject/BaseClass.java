@@ -161,5 +161,12 @@ public class BaseClass {
 
 	}
 	
+	public static boolean isElementPresent(WebDriver driver, By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            return true; // Element found
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false; // Element not found
+        }}
 	
 }
